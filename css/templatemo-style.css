@@ -483,8 +483,22 @@ a:hover, a:active, a:focus {
 }
 
 #education .education-img {
+  position: relative; /* Делаем контейнер относительным для позиционирования псевдоэлемента */
   background: url('../images/education-img.jpg') no-repeat;
+  background-size: cover; /* Чтобы изображение покрывало весь блок */
 }
+
+#education .education-img::before {
+  content: ''; /* Обязательное свойство для псевдоэлемента */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(214, 184, 162, 0.7); /* Цвет #d6b8a2 с прозрачностью 50% */
+  pointer-events: none; /* Чтобы псевдоэлемент не блокировал взаимодействие с содержимым */
+}
+
 
 #education .media-heading {
   margin-bottom: 0px;
@@ -516,7 +530,7 @@ a:hover, a:active, a:focus {
 }
 
 #quotes .overlay {
-    background: #121212; /* Не менять*/
+    background: #d6b8a2; /* Не менять*/
     width: 100%;
     height: 100%;
     position: absolute;
