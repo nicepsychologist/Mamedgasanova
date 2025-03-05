@@ -617,6 +617,29 @@ a:hover, a:active, a:focus {
   padding-right: 10px;
 }
 
+.download-section {  /*Кнопка для скачивания файла*/
+  margin-top: 30px;
+}
+
+.btn-download {
+  display: inline-block;
+  font-size: 18px;
+  color: #4e4d4d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-download i {
+  margin-right: 8px;
+}
+
+.btn-download:hover {
+  background: #a7866f;
+}                         /*Кнопка для скачивания файла*/
+
+
 
 
 /*---------------------------------------
